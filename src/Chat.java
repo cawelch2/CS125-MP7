@@ -9,33 +9,41 @@ public class Chat {
 		System.out.println("Hello. My name is ChatBot! How can I help you?");
 		String nextLine = myScanner.nextLine();
 		while (!nextLine.equals("")) {
-			printClasses(nextLine);
+			if (!printClasses(nextLine).equals("")) {
+				System.out.println(printClasses(nextLine));
+			} else {
+				System.out.println("Sorry, please try again.");
+			}
 			nextLine = myScanner.nextLine();
 		}
 		System.out.println("Thank you for using ChatBot. Goodbye!");
 	}
 
-	public static void printClasses(String message) {
+	public static String printClasses(String message) {
+		String output = "";
 		if (message.toUpperCase().contains("CS") || message.toLowerCase().contains("computer science")) {
-			System.out.println("The CS classes available are: ");
+			output += "The CS classes available are: \n";
 			for (int x = 0; x < CourseArray.courses.length; x++) {
-				if (CourseArray.courses[x].title.equals("CS"))
-					System.out.println(CourseArray.courses[x].toString());
+				if (CourseArray.courses[x].subject.equals("CS"))
+					output += CourseArray.courses[x].toString() + "\n";
 			}
-		} else if (message.toUpperCase().contains("CHEM") || message.toLowerCase().contains("chemistry")) {
-			System.out.println("The CHEM classes available are: ");
-			for (int x = 0; x < CourseArray.courses.length; x++) {
-				if (CourseArray.courses[x].title.equals("CHEM"))
-					System.out.println(CourseArray.courses[x].toString());
-			}
-		} else if (message.toUpperCase().contains("MATH") || message.toLowerCase().contains("mathematics")) {
-			System.out.println("The MATH classes available are: ");
-			for (int x = 0; x < CourseArray.courses.length; x++) {
-				if (CourseArray.courses[x].title.equals("MATH"))
-					System.out.println(CourseArray.courses[x].toString());
-			}
-		} else {
-			System.out.println("Sorry, please try again.");
+			output += "\n";
 		}
+		if (message.toUpperCase().contains("CHEM") || message.toLowerCase().contains("chemistry")) {
+			output += "The CHEM classes available are: \n";
+			for (int x = 0; x < CourseArray.courses.length; x++) {
+				if (CourseArray.courses[x].subject.equals("CHEM"))
+					output += CourseArray.courses[x].toString() + "\n";
+			}
+			output += "\n";
+		}
+		if (message.toUpperCase().contains("MATH") || message.toLowerCase().contains("mathematics")) {
+			output += "The MATH classes available are: \n";
+			for (int x = 0; x < CourseArray.courses.length; x++) {
+				if (CourseArray.courses[x].subject.equals("MATH"))
+					output += CourseArray.courses[x].toString() + "\n";
+			}
+		}
+		return output;
 	}
 }

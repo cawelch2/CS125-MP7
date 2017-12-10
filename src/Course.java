@@ -1,15 +1,15 @@
 public class Course {
-	public String title;
-	private int id;
-	public String term;
+	public String subject;
+	private int number;
+	private String title;
 	
-	public Course(String name, int myId, String sem) {
-		title = name.toUpperCase();
-		id = myId;
-		term = sem;
+	public Course(String sub, int myId, String name) {
+		subject = sub.toUpperCase();
+		number = myId;
+		title = name;
 	}
 	
 	public String toString() {
-		return title + " " + id + " " + term;
+		return subject + " " + number + ": " + title;
 	}
 }
