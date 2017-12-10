@@ -12,6 +12,6 @@ public class CourseArray {
 			new Course("ART", 154, "Digital Video"), 
 			new Course("ART", 155, "Introduction to Graphic Design - Unit One"), 
 			new Course("ART", 199, "Undergraduate Open Seminar"), 
-			new Course("ART", 201, "in Early Childhood")
+			new Course("ART", 201, "Art in Early Childhood")
 		};
 }
