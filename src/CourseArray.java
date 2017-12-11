@@ -75,7 +75,6 @@ public class CourseArray {
 			new Course("ECON", 203, "Economic Statistics II"),
 			new Course("ECON", 210, "Environmental Economics"),
 			new Course("ECON", 220, "Intl Economic Principles"),
-			new Course("LAW", 199, "Undergraduate Open Seminar"),
 			new Course("MATH", 101, "Thinking Mathematically"),
 			new Course("MATH", 103, "Theory of Arithmetic"),
 			new Course("MATH", 112, "Algebra"),
@@ -107,6 +106,11 @@ public class CourseArray {
 			new Course("PHYS", 214, "Univ Physics: Quantum Physics"),
 			new Course("PHYS", 222, "Enrichment E & M"),
 			new Course("PHYS", 225, "Relativity & Math Applications"),
-			new Course("PHYS", 298, "Freshmen/Sophomore Special Topics in Physics")
+			new Course("PHYS", 298, "Freshmen/Sophomore Special Topics in Physics"),
+			new Course("RHET", 100, "Rhetoric Tutorial"),
+			new Course("RHET", 101, "Principles of Writing"),
+			new Course("RHET", 105, "Writing and Research"),
+			new Course("RHET", 199, "Undergraduate Open Seminar"),
+			new Course("RHET", 233, "Advanced Rhetoric & Composition")
 		};
 }
