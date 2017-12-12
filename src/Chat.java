@@ -6,7 +6,13 @@ public class Chat {
 
 	public static void startChat() {
 		myScanner = new Scanner(System.in);
-		System.out.println("Hello. My name is ChatBot! How can I help you?");
+		System.out.println("Hello. My name is ChatBot!");
+		System.out.println("Please tell me your name.");
+		String name = myScanner.nextLine();
+		System.out.println("Please tell me your grade level.");
+		String year = myScanner.nextLine();
+		Student s1 = new Student(name, year);
+		System.out.println("Nice to meet you, " + s1.name + ". How can I help you?");
 		String nextLine = myScanner.nextLine();
 		while (!nextLine.equals("")) {
 			if (!printClasses(nextLine).equals("")) {
@@ -99,6 +105,7 @@ public class Chat {
 				if (CourseArray.courses[x].subject.equals("RHET"))
 					output += CourseArray.courses[x].toString() + "\n";
 			}
+			output += "\n";
 		}
 		return output;
 	}
