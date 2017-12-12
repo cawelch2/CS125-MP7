@@ -8,12 +8,12 @@ public class Student {
 	 * Name field for a student.
 	 */
 	public String name;
-	
+
 	/**
 	 * Grade of the student.
 	 */
 	public String grade;
-	
+
 	/**
 	 * Constructor for making a new student object.
 	 * @param person name of the person

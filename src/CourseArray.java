@@ -120,5 +120,5 @@ public class CourseArray {
 			new Course("RHET", 105, "Writing and Research"),
 			new Course("RHET", 199, "Undergraduate Open Seminar"),
 			new Course("RHET", 233, "Advanced Rhetoric & Composition")
-		};
+	};
 }

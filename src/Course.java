@@ -8,17 +8,17 @@ public class Course {
 	 * Subject field for each course.
 	 */
 	public String subject;
-	
+
 	/**
 	 * Number field for each course.
 	 */
 	private int number;
-	
+
 	/**
 	 * Name of each course.
 	 */
 	private String title;
-	
+
 	/**
 	 * Constructor for making a new course.
 	 * 
@@ -31,7 +31,7 @@ public class Course {
 		number = myId;
 		title = name;
 	}
-	
+
 	/**
 	 * toString method to print out each course object.
 	 */
