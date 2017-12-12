@@ -1,18 +1,29 @@
 import java.util.Scanner;
 
+/**
+ * Class where the bot is defined and reads user inputs.
+ * 
+ * @author cawelch2
+ */
 public class Chat {
 
+	/**
+	 * Scanner used to read user inputs.
+	 */
 	private static Scanner myScanner;
 
+	/**
+	 * Method that Illinois Course Explorer Bot uses to communicate with the user.
+	 */
 	public static void startChat() {
 		myScanner = new Scanner(System.in);
-		System.out.println("Hello. My name is ChatBot!");
+		System.out.println("Hello. My name is Illinois Course Explorer Bot!");
 		System.out.println("Please tell me your name.");
 		String name = myScanner.nextLine();
 		System.out.println("Please tell me your grade level.");
 		String year = myScanner.nextLine();
 		Student s1 = new Student(name, year);
-		System.out.println("Nice to meet you, " + s1.name + ". How can I help you?");
+		System.out.println("Nice to meet you, " + s1.name + "! How can I help you?");
 		String nextLine = myScanner.nextLine();
 		while (!nextLine.equals("")) {
 			if (!printClasses(nextLine).equals("")) {
@@ -25,6 +36,11 @@ public class Chat {
 		System.out.println("Thank you for using ChatBot. Goodbye!");
 	}
 
+	/**
+	 * Method to print out the classes depending on user input.
+	 * @param message the user input
+	 * @return string with courses corresponding to user input
+	 */
 	public static String printClasses(String message) {
 		String output = "";
 		if (message.toUpperCase().contains("ART") || message.toLowerCase().contains("drawing")) {

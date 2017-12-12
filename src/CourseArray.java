@@ -1,4 +1,12 @@
+/**
+ * Class to hold the course array.
+ * 
+ * @author lmkuo2
+ */
 public class CourseArray {
+	/**
+	 * Static course array manually inserted (for now).
+	 */
 	public static Course[] courses = {
 			new Course("ART", 100, "Understanding Visual Culture"), 
 			new Course("ART", 102, "Drawing for Non-Majors"), 
